@@ -57,11 +57,11 @@ sudo systemctl stop start_swift.service
 sudo cp /opt/cloud/swift.conf /etc/swift/swift.conf
 
 cd /etc/swift
-sudo swift-ring-builder account.builder create 17 3 1
-sudo swift-ring-builder container.builder create 17 3 1
-sudo swift-ring-builder object.builder create 17 3 1
-sudo swift-ring-builder object-1.builder create 17 3 1
-sudo swift-ring-builder object-2.builder create 17 3 1
+sudo swift-ring-builder account.builder create 3 3 1
+sudo swift-ring-builder container.builder create 3 3 1
+sudo swift-ring-builder object.builder create 3 3 1
+sudo swift-ring-builder object-1.builder create 3 3 1
+sudo swift-ring-builder object-2.builder create 3 3 1
 
 echo Adding device 1...
 sudo swift-ring-builder account.builder add r1z1-127.0.0.1:6202/d1 100
@@ -117,4 +117,5 @@ sudo pip install eventlet==0.25.0
 # sudo swift-init object start
 # sudo swift-init proxy restart
 
+echo Enjoy! - Thank you Zulfikar, the KING!
 echo 'run and configure: sudo nano /etc/swift/proxy-server.conf'
